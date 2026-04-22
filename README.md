@@ -1,5 +1,7 @@
 # Relationship Diagram Tool (English Unofficial Translation and Reconstruction)
 
+<img width="1652" height="1007" alt="image" src="https://github.com/user-attachments/assets/b6af8bf7-27a5-4a33-98e1-b388fa481a5a" />
+
 A free, browser-based character relationship chart maker. Create cute pastel diagrams for anime, manga, dramas, friend groups, and more, no signup, no installation required.
 
 **Original Japanese Tool:** https://amix-design.com/tl/tool-dia/
