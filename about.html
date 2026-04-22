@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Use | Relationship Diagram Tool | Free Character Chart Maker | AMIX</title>
+<meta name="description" content="Learn how to use the relationship diagram tool. Create character relationship charts for anime, manga, dramas easily and free in your browser. Supports image uploads, customizable labels, and PNG/JPEG export." />
+<meta name="keywords" content="relationship diagram,character chart,love triangle,tutorial,guide,character relationship,free diagram tool" />
+<link rel="canonical" href="./about.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amix-design.com/tl/tool-dia/about.html" />
+<meta property="og:title" content="How to Use | Relationship Diagram Tool" />
+<meta property="og:description" content="Create relationship diagrams easily in your browser. Image upload support, PNG export. Learn how to use." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Relationship Diagram Tool" />
+<meta property="og:image" content="https://amix-design.com/tl/tool-dia/ogp/ogp.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="How to Use Relationship Diagram Tool" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Use | Relationship Diagram Tool" />
+<meta name="twitter:description" content="Create relationship diagrams easily in your browser. Image upload support, PNG export." />
+<meta name="twitter:image" content="https://amix-design.com/tl/tool-dia/ogp/ogp.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Relationship Diagram Tool",
+  "applicationCategory":"DesignApplication",
+  "operatingSystem":"Web",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Create character relationship diagrams for anime, manga, dramas. Supports image uploads, customizable labels, and PNG/JPEG export.",
+  "author":{"@type":"Organization","name":"AMIX","url":"https://amix-design.com/"}
+}
+</script>
+<style>
+:root{
+  --bg-cream:#FFF7EC; --bg-pink:#FFE9F1; --bg-mint:#E6F7EE; --bg-lav:#EEE8FB; --bg-sky:#E4F1FB;
+  --ink:#3a2c3a; --ink-soft:#7a6a7a; --paper:#FFFEFB;
+  --line:#F2D4DD; --line-strong:#E7A9BD;
+  --pink:#FF8FB1; --pink-deep:#F56A92; --mint:#7DD8B4; --lav:#B7A0EE; --sky:#8CCBF0; --coral:#F77F6E;
+  --shadow: 0 6px 0 rgba(120,76,110,.12), 0 2px 0 rgba(120,76,110,.06);
+  --shadow-pop: 0 10px 0 rgba(120,76,110,.14), 0 2px 0 rgba(120,76,110,.06);
+  --sans: "M PLUS Rounded 1c","Zen Maru Gothic",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--sans); color:var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, #FFE1EC 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, #E4D4F7 0%, transparent 45%),
+    radial-gradient(circle at 70% 90%, #C7ECD9 0%, transparent 45%),
+    var(--bg-cream);
+  background-attachment:fixed;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--pink-deep); text-decoration:none; font-weight:700}
+a:hover{text-decoration:underline}
+
+/* ---------- Top nav ---------- */
+.nav{
+  position:sticky; top:0; z-index:10;
+  background:rgba(255,254,251,.85); backdrop-filter:blur(8px);
+  border-bottom:3px dashed var(--line);
+}
+.nav-inner{
+  max-width:960px; margin:0 auto;
+  padding:14px 24px; display:flex; align-items:center; gap:14px;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:900; font-size:16px; color:var(--ink);}
+.brand .logo{
+  width:36px;height:36px;border-radius:12px;
+  background:radial-gradient(circle at 30% 30%, #fff 0 6px, transparent 7px),
+             linear-gradient(135deg,var(--pink),var(--lav));
+  box-shadow:var(--shadow);
+  display:grid;place-items:center; color:#fff; font-size:18px;
+  transform:rotate(-6deg);
+}
+.nav-spacer{flex:1}
+.cta{
+  background:var(--pink); color:#fff; font-weight:800;
+  padding:9px 16px; border-radius:14px; border:none;
+  box-shadow:var(--shadow); font-family:inherit; font-size:14px;
+  display:inline-flex; align-items:center; gap:6px;
+}
+.cta:hover{background:var(--pink-deep); text-decoration:none; color:#fff; transform:translateY(-1px)}
+@media (max-width: 640px){
+  .nav-inner .cta{display:none}
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  max-width:960px; margin:0 auto;
+  padding:56px 24px 24px; text-align:center;
+}
+.hero .eyebrow{
+  display:inline-block;
+  background:var(--paper); color:var(--ink-soft); font-weight:800; font-size:12px;
+  padding:6px 14px; border-radius:999px;
+  border:2px dashed var(--line);
+  letter-spacing:.08em;
+}
+.hero h1{
+  font-size:clamp(28px, 5vw, 44px); margin:16px 0 10px;
+  font-weight:900; line-height:1.3;
+  text-wrap:balance;
+}
+.hero h1 .mark{
+  background:linear-gradient(transparent 55%, #FFE1EC 55%);
+  padding:0 4px;
+}
+.hero p.lead{
+  max-width:680px; margin:0 auto;
+  font-size:16px; color:var(--ink-soft);
+  text-wrap:pretty;
+}
+.hero-art{
+  max-width:720px; margin:26px auto 0;
+  background:var(--paper); border-radius:24px;
+  box-shadow:var(--shadow-pop);
+  padding:24px; position:relative; overflow:hidden;
+}
+.hero-art::before{
+  content:""; position:absolute; inset:0;
+  background-image: radial-gradient(#F3CBD7 1.4px, transparent 1.6px);
+  background-size:18px 18px; opacity:.5; pointer-events:none;
+}
+.hero-svg{display:block; width:100%; height:auto; position:relative; z-index:1}
+
+/* ---------- Sections ---------- */
+.section{
+  max-width:960px; margin:0 auto;
+  padding:40px 24px;
+}
+.section h2{
+  font-size:clamp(22px, 3.5vw, 30px);
+  font-weight:900; margin:0 0 8px;
+  display:flex; align-items:center; gap:12px;
+}
+.section h2 .tag{
+  display:inline-grid; place-items:center;
+  width:36px;height:36px; border-radius:12px;
+  background:var(--pink); color:#fff; font-size:18px;
+  box-shadow:var(--shadow);
+  transform:rotate(-6deg);
+}
+.section h2.mint .tag{background:var(--mint)}
+.section h2.lav .tag{background:var(--lav)}
+.section h2.sky .tag{background:var(--sky)}
+.section h2.coral .tag{background:var(--coral)}
+.section .sub{color:var(--ink-soft); margin:0 0 22px; font-size:15px}
+
+/* feature grid */
+.features{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:18px; margin-top:18px;
+}
+.feature{
+  background:var(--paper); border-radius:20px;
+  padding:20px 22px; box-shadow:var(--shadow);
+  border:2px solid transparent;
+  transition:transform .15s, box-shadow .15s;
+}
+.feature:hover{transform:translateY(-2px); box-shadow:var(--shadow-pop)}
+.feature .ico{
+  width:44px;height:44px;border-radius:14px;
+  background:var(--bg-pink); display:grid; place-items:center;
+  font-size:22px; margin-bottom:10px;
+  box-shadow:0 2px 0 rgba(120,76,110,.1);
+}
+.feature.mint .ico{background:var(--bg-mint)}
+.feature.lav  .ico{background:var(--bg-lav)}
+.feature.sky  .ico{background:var(--bg-sky)}
+.feature h3{margin:0 0 6px; font-size:16px; font-weight:900}
+.feature p{margin:0; color:var(--ink-soft); font-size:14px; line-height:1.7}
+
+/* steps */
+.steps{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+}
+.step{
+  background:var(--paper); border-radius:20px;
+  padding:18px 20px; box-shadow:var(--shadow);
+  position:relative;
+}
+.step .num{
+  position:absolute; top:-14px; left:16px;
+  width:34px;height:34px;border-radius:50%;
+  background:var(--pink); color:#fff; font-weight:900;
+  display:grid; place-items:center; font-size:15px;
+  box-shadow:var(--shadow);
+}
+.step h3{margin:10px 0 6px; font-size:16px; font-weight:900}
+.step p{margin:0; color:var(--ink-soft); font-size:14px; line-height:1.7}
+.step:nth-child(2) .num{background:var(--lav)}
+.step:nth-child(3) .num{background:var(--mint)}
+.step:nth-child(4) .num{background:var(--coral)}
+.step:nth-child(5) .num{background:var(--sky)}
+
+/* use cases */
+.usecases{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:14px;
+}
+.usecase{
+  background:var(--paper); border-radius:18px;
+  padding:16px 18px; box-shadow:var(--shadow);
+  display:flex; align-items:flex-start; gap:12px;
+}
+.usecase .emo{font-size:26px; flex-shrink:0; line-height:1}
+.usecase h3{margin:0 0 4px; font-size:15px; font-weight:900}
+.usecase p{margin:0; color:var(--ink-soft); font-size:13px; line-height:1.6}
+
+/* relations table */
+.rel-list{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap:10px;
+}
+.rel-chip{
+  background:var(--paper); border-radius:14px;
+  padding:12px 14px; box-shadow:var(--shadow);
+  display:flex; align-items:center; gap:10px;
+}
+.rel-chip .mark{
+  width:30px; height:30px; border-radius:50%;
+  display:grid; place-items:center; color:#fff; font-weight:900;
+  flex-shrink:0;
+}
+.rel-chip h3{margin:0; font-size:14px; font-weight:900}
+.rel-chip p{margin:0; font-size:12px; color:var(--ink-soft)}
+
+/* arrow styles gallery */
+.arrow-gal{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:12px;
+}
+.arrow-card{
+  background:var(--paper); border-radius:16px;
+  padding:12px 14px; box-shadow:var(--shadow);
+}
+.arrow-card .demo{
+  height:56px; display:grid; place-items:center;
+  background:var(--bg-cream); border-radius:10px; margin-bottom:8px;
+}
+.arrow-card h3{margin:0; font-size:13px; font-weight:900}
+.arrow-card p{margin:2px 0 0; font-size:12px; color:var(--ink-soft); line-height:1.6}
+
+/* FAQ */
+.faq{display:flex; flex-direction:column; gap:10px}
+.faq details{
+  background:var(--paper); border-radius:16px;
+  padding:14px 18px; box-shadow:var(--shadow);
+}
+.faq summary{
+  cursor:pointer; font-weight:900; font-size:15px;
+  list-style:none; display:flex; justify-content:space-between; align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--pink-deep); font-size:20px; transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:10px 0 0; color:var(--ink-soft); font-size:14px; line-height:1.8}
+
+/* final CTA */
+.final-cta{
+  max-width:960px; margin:20px auto 0;
+  padding:40px 24px;
+}
+.final-cta .box{
+  background:var(--paper); border-radius:28px; padding:40px 28px;
+  text-align:center; box-shadow:var(--shadow-pop);
+  border:3px dashed var(--line);
+}
+.final-cta h2{font-size:clamp(22px, 3.5vw, 28px); margin:0 0 10px}
+.final-cta p{margin:0 0 20px; color:var(--ink-soft)}
+
+/* footer */
+.footer{
+  max-width:960px; margin:0 auto;
+  padding:30px 24px 50px;
+  border-top:2px dashed var(--line); margin-top:30px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+  font-size:13px; color:var(--ink-soft);
+}
+.footer a{color:var(--ink-soft); font-weight:700}
+.footer .sep{opacity:.4}
+
+/* Small svg demo of node/edge */
+.mini-svg{width:100%; height:100%}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <div class="logo">♡</div>
+      <div>Relationship Diagram Tool</div>
+    </a>
+    <div class="nav-spacer"></div>
+    <a class="cta" href="index.html">Create Now</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Free · Browser-based · No signup</span>
+  <h1>Create <span class="mark">Relationship</span> & <span class="mark">Character Charts</span><br/>with cute designs</h1>
+  <p class="lead">
+    From anime and manga character relationships to friend circles and viral social media content.
+    Just upload images and add relationship labels like "Love", "Hate", "Rival" with arrows.
+    Export your diagram as PNG or JPEG.
+  </p>
+  <div class="hero-art">
+    <svg class="hero-svg" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#F56A92" />
+        </marker>
+        <marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#B7A0EE" />
+        </marker>
+        <marker id="ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#F77F6E" />
+        </marker>
+      </defs>
+
+      <!-- Edges -->
+      <path d="M 230 220 Q 360 140 490 220" stroke="#F56A92" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#ar1)"/>
+      <path d="M 360 90 Q 420 180 490 220" stroke="#B7A0EE" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#ar2)"/>
+      <path d="M 360 90 Q 300 180 230 220" stroke="#F77F6E" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="1 10" marker-end="url(#ar3)"/>
+
+      <!-- Labels -->
+      <g transform="translate(360,180)"><rect x="-26" y="-14" width="52" height="28" rx="14" fill="#fff" stroke="#F2D4DD" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" y="1" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="800" font-size="13" fill="#F56A92">♡ Love</text></g>
+      <g transform="translate(445,150)"><rect x="-40" y="-14" width="80" height="28" rx="14" fill="#fff" stroke="#F2D4DD" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" y="1" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="800" font-size="13" fill="#B7A0EE">? Crush</text></g>
+      <g transform="translate(275,150)"><rect x="-42" y="-14" width="84" height="28" rx="14" fill="#fff" stroke="#F2D4DD" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" y="1" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="800" font-size="13" fill="#F77F6E">⚡ Rival</text></g>
+
+      <!-- Nodes -->
+      <g transform="translate(360,90)">
+        <circle r="46" fill="#FFB3C7" stroke="#fff" stroke-width="4"/>
+        <text text-anchor="middle" dominant-baseline="central" font-size="38">🌸</text>
+        <g transform="translate(0,66)">
+          <rect x="-30" y="-12" width="60" height="24" rx="12" fill="#fff" stroke="#F2D4DD" stroke-width="2"/>
+          <text text-anchor="middle" dominant-baseline="middle" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="900" font-size="12" y="1">Hina</text>
+        </g>
+      </g>
+      <g transform="translate(230,220)">
+        <circle r="46" fill="#B5D9F2" stroke="#fff" stroke-width="4"/>
+        <text text-anchor="middle" dominant-baseline="central" font-size="38">🐱</text>
+        <g transform="translate(0,66)">
+          <rect x="-36" y="-12" width="72" height="24" rx="12" fill="#fff" stroke="#F2D4DD" stroke-width="2"/>
+          <text text-anchor="middle" dominant-baseline="middle" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="900" font-size="12" y="1">Kaito</text>
+        </g>
+      </g>
+      <g transform="translate(490,220)">
+        <rect x="-46" y="-46" width="92" height="92" rx="22" fill="#C9BEF5" stroke="#fff" stroke-width="4"/>
+        <text text-anchor="middle" dominant-baseline="central" font-size="38">⭐</text>
+        <g transform="translate(0,66)">
+          <rect x="-30" y="-12" width="60" height="24" rx="12" fill="#fff" stroke="#F2D4DD" stroke-width="2"/>
+          <text text-anchor="middle" dominant-baseline="middle" font-family='"M PLUS Rounded 1c",sans-serif' font-weight="900" font-size="12" y="1">Ren</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<section class="section">
+  <h2><span class="tag">✿</span>Features</h2>
+  <p class="sub">Everything you need to create relationship diagrams. No special software needed - just your browser.</p>
+  <div class="features">
+    <div class="feature">
+      <div class="ico">📷</div>
+      <h3>Image Upload for Characters</h3>
+      <p>Upload your favorite character images and turn them into circle, square, or bubble icons. You can also use emojis or colored circles.</p>
+    </div>
+    <div class="feature mint">
+      <div class="ico">↔️</div>
+      <h3>6 Arrow Styles</h3>
+      <p>One-way, two-way, heart, cracked, dotted, wavy. Choose the style that best fits the relationship nuance.</p>
+    </div>
+    <div class="feature lav">
+      <div class="ico">♡</div>
+      <h3>Relationship Labels & Stamps</h3>
+      <p>Presets include Love, Hate, Rival, Trust, Interested. You can also enter custom labels and add stamp decorations.</p>
+    </div>
+    <div class="feature sky">
+      <div class="ico">🧩</div>
+      <h3>Add Unlimited Nodes</h3>
+      <p>Not just for triangles! Add 4, 5, or more characters. No limits - drag and place complex relationship maps freely.</p>
+    </div>
+    <div class="feature">
+      <div class="ico">⤓</div>
+      <h3>Export as PNG / JPEG</h3>
+      <p>One-click image save. Ready for social media posts or documents.</p>
+    </div>
+    <div class="feature mint">
+      <div class="ico">↶</div>
+      <h3>Undo / Redo & Samples</h3>
+      <p>Use Ctrl+Z/Y to undo and redo. Load sample diagrams to get started quickly.</p>
+    </div>
+    <div class="feature lav">
+      <div class="ico">💾</div>
+      <h3>Save / Load Project Files</h3>
+      <p>Save your diagram as a <code>.sankaku.json</code> file. Open it another day to continue editing. Includes uploaded images.</p>
+    </div>
+    <div class="feature sky">
+      <div class="ico">🔄</div>
+      <h3>Auto Backup</h3>
+      <p>Your work is automatically saved to your browser. Even if you close the tab, your previous state is restored when you return.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="mint"><span class="tag">1</span>Easy 5-Step Guide</h2>
+  <p class="sub">Even beginners can create a relationship diagram in minutes.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Add a Node</h3>
+      <p>Click "+ Add Node" to add a character. You can add a name and a short subtitle.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Set the Icon</h3>
+      <p>Upload an image or choose an emoji or colored circle. You can also change the shape to circle, square, or bubble.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Connect with Lines</h3>
+      <p>Hover over a node to see the <b style="color:var(--mint)">+</b> mark in the top right. Drag it to another node to create a connection.</p>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <h3>Customize Relationships & Arrows</h3>
+      <p>Click on a line to set relationship labels like Love/Hate/Rival, arrow style, color, and stamp decorations.</p>
+    </div>
+    <div class="step">
+      <div class="num">5</div>
+      <h3>Export as Image</h3>
+      <p>Click "⤓ PNG" or "⤓ JPEG" to download. Background patterns and titles are included in the export.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="lav"><span class="tag">◎</span>Use Cases</h2>
+  <p class="sub">Perfect for anyone who wants to visualize relationships at a glance. Here are some examples:</p>
+  <div class="usecases">
+    <div class="usecase"><div class="emo">📺</div><div><h3>Anime & Manga Character Charts</h3><p>Organize your favorite couples and fan theories.</p></div></div>
+    <div class="usecase"><div class="emo">🎬</div><div><div><h3>Drama & Movie Character Maps</h3><p>Visualize complex relationships in long-running series.</p></div></div>
+    <div class="usecase"><div class="emo">✍️</div><div><h3>Novel & Creative Writing</h3><p>Organize character relationships for your stories.</p></div></div>
+    <div class="usecase"><div class="emo">🏫</div><div><h3>Class & Club Relationships</h3><p>Map out social connections in your group.</p></div></div>
+    <div class="usecase"><div class="emo">📱</div><div><h3>Viral Social Media Content</h3><p>Create cute relationship charts for Twitter/X and Instagram.</p></div></div>
+    <div class="usecase"><div class="emo">🎓</div><div><h3>Historical & Fictional Relationships</h3><p>Use for educational materials on historical or mythological relationships.</p></div></div>
+    <div class="usecase"><div class="emo">💼</div><div><h3>Org Charts & Stakeholder Maps</h3><p>Visualize team relationships and business connections.</p></div></div>
+    <div class="usecase"><div class="emo">🎮</div><div><h3>Game Character Relationships</h3><p>Organize character relationships in RPGs or otome games.</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="sky"><span class="tag">→</span>Relationship Labels & Arrow Styles</h2>
+  <p class="sub">Use preset relationship labels (or enter custom ones) and 6 arrow styles.</p>
+
+  <h3 style="margin:10px 0 10px; font-size:16px">Relationship Labels</h3>
+  <div class="rel-list">
+    <div class="rel-chip"><div class="mark" style="background:#F56A92">♡</div><div><h3>Love</h3><p>Romantic feelings</p></div></div>
+    <div class="rel-chip"><div class="mark" style="background:#7a6a7a">✕</div><div><h3>Hate</h3><p>Dislike, aversion</p></div></div>
+    <div class="rel-chip"><div class="mark" style="background:#F77F6E">⚡</div><div><h3>Rival</h3><p>Competition</p></div></div>
+    <div class="rel-chip"><div class="mark" style="background:#7DD8B4">★</div><div><h3>Trust</h3><p>Friendship, trust</p></div></div>
+    <div class="rel-chip"><div class="mark" style="background:#B7A0EE">?</div><div><h3>Interested</h3><p>Curious, crush</p></div></div>
+    <div class="rel-chip"><div class="mark" style="background:#8CCBF0">＋</div><div><h3>Custom</h3><p>Enter your own</p></div></div>
+  </div>
+
+  <h3 style="margin:26px 0 10px; font-size:16px">Arrow Styles</h3>
+  <div class="arrow-gal">
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><defs><marker id="m1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F56A92"/></marker></defs><path d="M10 20 L190 20" stroke="#F56A92" stroke-width="4" fill="none" marker-end="url(#m1)" stroke-linecap="round"/></svg></div><h3>One-way Arrow</h3><p>Unidirectional feelings or actions.</p></div>
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><defs><marker id="m2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7DD8B4"/></marker></defs><path d="M10 20 L190 20" stroke="#7DD8B4" stroke-width="4" fill="none" marker-start="url(#m2)" marker-end="url(#m2)" stroke-linecap="round"/></svg></div><h3>Two-way Arrow</h3><p>Mutual relationships, mutual feelings.</p></div>
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><path d="M10 20 Q100 5 190 20" stroke="#F56A92" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M0,-2 C -4,-10 -14,-6 -14,2 C -14,10 0,16 0,16 C 0,16 14,10 14,2 C 14,-6 4,-10 0,-2 Z" fill="#F56A92" stroke="#fff" stroke-width="2" transform="translate(100,14) scale(0.6)"/></svg></div><h3>Heart</h3><p>Mutual love, strong affection.</p></div>
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><path d="M10 20 L35 12 L55 28 L75 10 L95 30 L115 12 L135 28 L155 14 L175 26 L190 20" stroke="#F77F6E" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Cracked</h3><p>Broken relationships, cracks.</p></div>
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><defs><marker id="m3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B7A0EE"/></marker></defs><path d="M10 20 L190 20" stroke="#B7A0EE" stroke-width="4" fill="none" stroke-dasharray="1 10" stroke-linecap="round" marker-end="url(#m3)"/></svg></div><h3>Dotted</h3><p>Vague relationships, subtle feelings.</p></div>
+    <div class="arrow-card"><div class="demo"><svg viewBox="0 0 200 40" class="mini-svg"><defs><marker id="m4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FFD97A"/></marker></defs><path d="M10 20 Q25 10 40 20 T70 20 T100 20 T130 20 T160 20 T190 20" stroke="#FFD97A" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#m4)"/></svg></div><h3>Wavy</h3><p>Unstable, fluctuating relationships.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="coral"><span class="tag">?</span>FAQ</h2>
+  <div class="faq">
+    <details open>
+      <summary>Is it really free?</summary>
+      <p>Yes! This is a free web tool that runs entirely in your browser. No registration or installation required - just visit the URL and start creating.</p>
+    </details>
+    <details>
+      <summary>Can I save my diagram as an image?</summary>
+      <p>Yes. Click "⤓ Export ▾" in the toolbar, then choose "Save as PNG" or "Save as JPEG". The entire diagram including background patterns and labels will be exported as a single image.</p>
+    </details>
+    <details>
+      <summary>Can I save my work and continue later?</summary>
+      <p>Yes. Use the "Save Project" option to download your work as a <code>.sankaku.json</code> file. You can load it later to continue editing. All uploaded images are included. Note: This feature is available on desktop only.</p>
+    </details>
+    <details>
+      <summary>Are uploaded images sent to a server?</summary>
+      <p>No. All image processing happens in your browser. Uploaded images are not sent to any server - they're stored locally in your browser as an automatic backup. You can delete them using "Clear All".</p>
+    </details>
+    <details>
+      <summary>How many nodes can I create?</summary>
+      <p>Technically unlimited, but we recommend <strong>around 20 nodes</strong> for best readability and performance. More nodes may result in cluttered connections and slower dragging.</p>
+    </details>
+    <details>
+      <summary>Can I use this on mobile?</summary>
+      <p>Yes! We have a <a href="sp.html"><b>mobile editor</b></a> optimized for touch. It features a bottom tab bar UI, guided flows for adding characters and relationships, and a screenshot mode. For precise editing, we recommend the desktop version.</p>
+    </details>
+    <details>
+      <summary>Can I use the exported images commercially?</summary>
+      <p>The exported images belong to you (the creator). However, please check the copyright status of any images or emojis you upload. See our <a href="https://amix-design.com/term/tools" target="_blank" rel="noopener">Terms of Service</a> for details.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="box">
+    <div style="font-size:40px">💕</div>
+    <h2>Start Creating Your Diagram</h2>
+    <p>You're all set. Create cute relationship charts right in your browser.</p>
+    <a class="cta" href="index.html" style="font-size:16px; padding:12px 22px">Open Generator →</a>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:0">
+  <h2 style="font-size:16px;gap:8px"><span class="tag" style="width:28px;height:28px;border-radius:8px;font-size:13px;background:var(--ink-soft)">!</span>Disclaimer</h2>
+  <div style="color:var(--ink-soft);font-size:13px;line-height:1.9">
+    <ul style="padding-left:1.4em;margin:8px 0 0">
+      <li>This tool is provided free of charge as-is. We make no guarantees about completeness, accuracy, or continuity.</li>
+      <li>Data is auto-saved to your browser's local storage, but may be lost due to browser settings, cache clearing, or private mode. <strong>Regularly save your work as a project file (.sankaku.json)</strong>.</li>
+      <li>You are responsible for any copyright or likeness rights of images you upload.</li>
+      <li>We are not liable for any damages resulting from use of images generated by this tool.</li>
+      <li>See <a href="https://amix-design.com/term/tools" target="_blank" rel="noopener">Terms of Service</a> for details.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>© Relationship Diagram Tool</div>
+  <div style="flex:1"></div>
+  <div>
+    Made by: <a href="https://amix-design.com/" target="_blank" rel="noopener">AMIX</a>
+    <span class="sep">/</span>
+    <a href="https://amix-design.com/tools" target="_blank" rel="noopener">All Tools</a>
+    <span class="sep">/</span>
+    <a href="https://amix-design.com/term/tools" target="_blank" rel="noopener">Terms</a>
+    <span class="sep">/</span>
+    <a href="license.html">License</a>
+  </div>
+</footer>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f00b9c28c50db15',t:'MTc3NjgxOTk4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"edff3d709f6e4536b5cdd493679d29f0","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
