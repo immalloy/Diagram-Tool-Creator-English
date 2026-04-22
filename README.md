@@ -5,6 +5,7 @@
 A free, browser-based character relationship chart maker. Create cute pastel diagrams for anime, manga, dramas, friend groups, and more, no signup, no installation required.
 
 **Original Japanese Tool:** https://amix-design.com/tl/tool-dia/
+**English Translated Tool:** https://immalloy.github.io/Diagram-Tool-Creator-English/
 
 ---
 
